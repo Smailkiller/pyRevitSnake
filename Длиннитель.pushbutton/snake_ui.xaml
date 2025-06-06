@@ -1,0 +1,25 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        Title="Snake" Height="540" Width="550" ResizeMode="NoResize">
+    <Grid>
+        <!-- Игровое поле -->
+        <Canvas Name="GameCanvas" Width="400" Height="400" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        
+        <!-- Панель управления справа -->
+        <StackPanel Orientation="Vertical" Margin="420,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110">
+            <TextBlock Name="ScoreText" FontSize="20" Margin="0,0,0,8"/>
+            <Button Name="ExitButton" Content="Выйти" Width="100" Height="35" Margin="0,0,0,8"/>
+            <Button Name="PauseButton" Content="Пауза" Width="100" Height="35" Margin="0,0,0,8"/>
+            <Button Name="ShopButton" Content="Магазин" Width="100" Height="35" Margin="0,0,0,8"/>
+            <Button Name="StartButton" Content="Старт" Width="100" Height="35" Margin="0,0,0,8"/>
+            <TextBlock Text="Карта:" FontSize="14" Margin="0,20,0,0"/>
+			<ComboBox Name="MapCombo" Width="120" Height="30" Margin="0,0,0,10">
+				<ComboBoxItem Content="Без препятствий" IsSelected="True"/>
+				<ComboBoxItem Content="Горизонтальная стена"/>
+				<ComboBoxItem Content="Вертикальная стена"/>
+				<ComboBoxItem Content="Диагональ"/>
+				<ComboBoxItem Content="Просто рамка"/>
+				<ComboBoxItem Content="Рамка с окнами"/>
+			</ComboBox>
+        </StackPanel>
+    </Grid>
+</Window>
